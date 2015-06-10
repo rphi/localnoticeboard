@@ -8,7 +8,7 @@
 
     <body>
 
-        <form id="newpost" action="writeposthandler.php" method="post">
+        <form id="newpost" action="/localnoticeboard/writeposthandler.php" method="post">
         ID: <strong>Now auto-generated ID instead</strong><br>
         Title: <input type="text" name="Title" id="Title"><br>
         Category: <select name="Category">

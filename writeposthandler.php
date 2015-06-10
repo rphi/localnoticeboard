@@ -1,9 +1,6 @@
 <?php
 
-$servername = "localhost";
-$username = "admin";
-$password = "xxxx";
-$dbname = "noticeboard";
+include ("/servercreds.php");
 
 echo "Connecting to SQL server @ ".$servername." into database ".$dbname."<br/>";
 

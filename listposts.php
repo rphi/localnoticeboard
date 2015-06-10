@@ -2,10 +2,7 @@
     <body>
         <?php
 
-        $servername = "localhost";
-        $username = "admin";
-        $password = "xxxxx";
-        $dbname = "noticeboard";
+        include ("/servercreds.php");
 
         echo "Connecting to SQL server @ ".$servername." into database ".$dbname."<br/>";
 
