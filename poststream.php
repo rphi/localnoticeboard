@@ -23,9 +23,16 @@
 
         echo "Connected successfully";
 
-        echo "<hr/>";
+        $result = mysqli_query($conn,"SELECT * FROM posts");
 
-        $result = mysqli_query($conn,"SELECT * FROM posts"); ?>
+        ?>
+
+        <br/>
+
+        <a class="btn btn-default" href="writepost.php">Add post</a>
+        <a class="btn btn-default" href="listposts.php">Table of posts</a>
+
+        <hr/>
 
         <div class="row">
 
@@ -34,12 +41,13 @@
             {
             echo "<div class=\"col-md-3 panel\">";
             echo "<strong>Post ID:</strong>  " . $row['ID'] . "<br/>";
-            echo "<strong>Title:</strong><br/><h3>" . $row['Title'] . "</h3>";
+            echo "<h2>" . $row['Title'] . "</h2>";
             echo "<strong>Category:</strong>  " . $row['Category'] . "<br/>";
             echo "<strong>Timestamp:</strong>  " . $row['Timestamp'] . "<br/>";
             echo "<strong>User:</strong>  " . $row['User'] . "<br/>";
             echo "<strong>Post:</strong><br/>" . $row['Content'] . "</br>";
             echo "<strong>Image:</strong>  " . $row['Image'] . "</br>";
+            echo "<img src=\"" . $row['Image'] . "\" class=\"img-responsive\"></img><br/>";
             echo "</div>";
             }
 
