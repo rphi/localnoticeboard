@@ -30,7 +30,7 @@
     <!-- Validation scripts -->
     <script>
     function checkLength() {
-        if (tinyMCE.activeEditor.getContent().length > 255)
+        if (tinyMCE.activeEditor.getContent().length > 2000)
             return true;
     };
 
