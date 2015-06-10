@@ -25,7 +25,7 @@ Timestamp TIMESTAMP default CURRENT_TIMESTAMP,
 User text,
 Content text,
 Image text,
-Rating INT(5) default '0'
+Rank INT(5) default '0'
 )";
 
 if ($conn->query($sql) === TRUE) {
