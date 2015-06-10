@@ -1,6 +1,6 @@
 <?php
 
-include ("/servercreds.php");
+include ("servercreds.php");
 
 echo "Connecting to SQL server @ ".$servername." into database ".$dbname."<br/>";
 
