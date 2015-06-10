@@ -2,7 +2,7 @@
     <body>
         <?php
 
-        include ("servercreds.php");
+        include ("sqlcreds.php");
 
         echo "Connecting to SQL server @ ".$servername." into database ".$dbname."<br/>";
 
@@ -29,6 +29,7 @@
         <th>User</th>
         <th>Content</th>
         <th>Image</th>
+        <th>Votes</th>
         </tr>";
 
         while($row = mysqli_fetch_array($result))
@@ -41,6 +42,7 @@
         echo "<td>" . $row['User'] . "</td>";
         echo "<td>" . $row['Content'] . "</td>";
         echo "<td>" . $row['Image'] . "</td>";
+        echo "<td>" . $row['Votes'] . "</td>";
         echo "</tr>";
         }
         echo "</table>";

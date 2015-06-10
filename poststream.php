@@ -9,7 +9,7 @@
     <body>
         <?php
 
-        include ("servercreds.php");
+        include ("sqlcreds.php");
 
         echo "Connecting to SQL server @ ".$servername." into database ".$dbname."<br/>";
 
@@ -48,6 +48,9 @@
             echo "<strong>Post:</strong><br/>" . $row['Content'] . "</br>";
             echo "<strong>Image:</strong>  " . $row['Image'] . "</br>";
             echo "<img src=\"" . $row['Image'] . "\" class=\"img-responsive\"></img><br/>";
+            echo "<strong>Votes:</strong> " . $row['Votes'] . "<br/>";
+            echo "<button type=\"button\" class=\"btn btn-default\" onClick=\"voteUp(" . $row['ID'] .", 'up')\">Vote Up</button>";
+            echo "<button type=\"button\" class=\"btn btn-default\" onClick=\"voteUp(" . $row['ID'] .", 'down')\">Vote Down</button>";
             echo "</div>";
             }
 
@@ -57,4 +60,19 @@
 
         </div>
     </body>
+
+    <!-- Voting JS -->
+
+    <script>
+
+        function voteUp(ID, direction) {
+            votepopup = window.open("voteconfirm.php?id=" + ID + "&direction=" + direction,'Voter','height=300,width=400');
+            if (window.focus) {
+                votepopup.focus()
+            };
+        };
+
+    </script>
+
+
 </html>
