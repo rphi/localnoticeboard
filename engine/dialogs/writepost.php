@@ -1,14 +1,4 @@
-<html>
-    <head><!-- CDN hosted by Cachefly -->
-        <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
-        <script>tinymce.init({
-            selector:'textarea'
-            });</script>
-    </head>
-
-    <body>
-
-        <form id="newpost" action="/localnoticeboard/writeposthandler.php" method="post">
+        <form id="newpost" action="?loc=engine/writeposthandler&ispage=false" method="post">
         ID: <strong>Now auto-generated ID instead</strong><br>
         Title: <input type="text" name="Title" id="Title"><br>
         Category: <select name="Category">
@@ -24,8 +14,6 @@
         Image URL:<input type="text" name="Image"><br>
             <button onclick="doSubmit()">Submit</button>
         </form>
-
-    </body>
 
     <!-- Validation scripts -->
     <script>
@@ -61,4 +49,10 @@
         };
     }
     </script>
-</html>
+
+    <script src="//tinymce.cachefly.net/4.1/tinymce.min.js"></script>
+
+    <script>tinymce.init({
+        selector:'textarea'
+        });</script>
+

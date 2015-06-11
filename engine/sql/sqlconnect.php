@@ -1,6 +1,8 @@
 <!-- Quick SQL connection code -->
 
 <?php
+    include ("engine/sql/sqlcreds.php");
+
     echo "Connecting to SQL server @ ".$servername." into database ".$dbname."<br/>";
 
     // Create connection
@@ -9,7 +11,7 @@
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
-    }
+    };
 
     echo "Connected successfully";
 ?>

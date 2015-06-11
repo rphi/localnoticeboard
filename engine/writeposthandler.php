@@ -1,18 +1,6 @@
 <?php
 
-include ("sqlcreds.php");
-
-echo "Connecting to SQL server @ ".$servername." into database ".$dbname."<br/>";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-echo "Connected successfully";
+include ("engine/sql/sqlconnect.php");
 
 echo "<hr/>";
 echo "Writing responses to table<br/>";
@@ -33,5 +21,7 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
+
+echo "<script>self.close()</script>";
 
 ?>

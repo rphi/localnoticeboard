@@ -44,7 +44,7 @@
             WHERE ID='".$ID."'");
 
             echo "<h4>Your vote has been processed<h4>";
-            echo "<button type=\"button\" class=\"btn btn-primary\" onclick=\"self.close()\">Close</button>";
+            echo "<script> self.close()</script>";
 
         ?>
 
