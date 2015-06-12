@@ -40,6 +40,17 @@
 
     if(file_exists($loc.$extn)) { $validloc = True; }
         else { $validloc = False; };
+
+    if($validloc == True) {
+        $loctofetch = $loc.$extn;
+    } else {
+        $loctofetch = "pages/404.html";
+        echo $loctofetch;
+    };
+
+    //include("engine/getvarsforwarder.php"); // Deals with forwarding of extra $_GET variables
+
+
 ?>
 <head>
     <?php
@@ -53,12 +64,7 @@
     <?php
         include("theme/modules/navbar.php");
 
-        if($validloc == True) {
-            include $loc.$extn;
-        } else {
-            readfile("pages/404.html");
-            echo $loc;
-        };
+        include($loctofetch);
 
         readfile("theme/modules/footer.html");
         readfile("theme/modules/corejs.html");

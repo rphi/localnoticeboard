@@ -24,7 +24,7 @@
     echo "<h2>".$postdetails['Title']."</h2>";
     echo "<p>By ".$postdetails['User']."</p>";
 
-    echo "<a class=\"btn btn-primary\" href=\"engine\voting\votehandler.php?id=".$ID."&direction=".$direction."\">Yes</a>";
+    echo "<a class=\"btn btn-primary\" href=\"?loc=engine/voting/votehandler&ispage=false&id=".$ID."&direction=".$direction."\">Yes</a>";
 
 
 ?>
