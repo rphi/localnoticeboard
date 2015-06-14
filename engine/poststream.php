@@ -3,7 +3,7 @@
 
 include ("engine/sql/sqlconnect.php"); // Include SQL connection script
 
-$result = mysqli_query($conn,"SELECT * FROM posts");
+$result = mysqli_query($conn,"SELECT * FROM posts ORDER BY Timestamp DESC");
 
 while($row = mysqli_fetch_array($result))
 {
