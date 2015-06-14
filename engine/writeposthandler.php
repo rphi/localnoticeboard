@@ -22,6 +22,7 @@ if ($conn->query($sql) === TRUE) {
 
 $conn->close();
 
+echo "<script>window.opener.location.href = \"?loc=posts&lastaction=composed\"</script>";
 echo "<script>self.close()</script>";
 
 ?>

@@ -7,7 +7,13 @@
 
 <div class="row">
 
-    <?php include ("engine/poststream.php"); ?>
+    <div class="col-md-12">
+
+        <?php include ("engine/alerts.php"); ?>
+
+        <?php include ("engine/poststream.php"); ?>
+
+    </div>
 
 </div>
 

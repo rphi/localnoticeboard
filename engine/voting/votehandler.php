@@ -8,7 +8,7 @@
     };
 ?>
 
-<h1>Your vote is being processed</h1>
+<h4>Please wait</h4>
 
 <?php
 
@@ -33,7 +33,8 @@
     SET Votes='".$newVotes."'
     WHERE ID='".$ID."'");
 
-    echo "<h4>Your vote has been processed<h4>";
+    echo "<h1>Your vote has been processed</h1>";
+    echo "<script>window.opener.parent.location.href = \"?loc=posts&lastaction=voted\"</script>";
     echo "<script> self.close()</script>";
 
 ?>
@@ -41,7 +42,7 @@
 
 <script>
 
-onClose() {
+function onClose() {
  window.opener.popUpClosed = true;
 };
 
