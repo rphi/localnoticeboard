@@ -12,7 +12,7 @@
         User: <input type="text" name="User"><br>
         Content (max 255 chars.): <textarea  name="Content" onkeyup="checkLength"></textarea><br>
         Image URL:<input type="text" name="Image"><br>
-            <button onclick="doSubmit()">Submit</button>
+        <button type="button" onclick="doSubmit()">Compose post</button>
         </form>
 
     <!-- Validation scripts -->
@@ -45,8 +45,10 @@
 
     function doSubmit() {
         if ( validate() ) {
-            document.getElementById("newpost").submit();
-        };
+            //document.getElementById("newpost").submit();
+            console.log("Post is ready to submit");
+            return true;
+        } else { return false; };
     }
     </script>
 
