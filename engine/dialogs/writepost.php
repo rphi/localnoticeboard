@@ -45,7 +45,7 @@
 
     function doSubmit() {
         if ( validate() ) {
-            //document.getElementById("newpost").submit();
+            document.getElementById("newpost").submit();
             console.log("Post is ready to submit");
             return true;
         } else { return false; };
