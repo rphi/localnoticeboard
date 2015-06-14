@@ -14,6 +14,7 @@
     <th>Content</th>
     <th>Image</th>
     <th>Votes</th>
+    <th>Delete?</th>
     </tr>";
 
     while($row = mysqli_fetch_array($result))
@@ -27,6 +28,7 @@
     echo "<td>" . $row['Content'] . "</td>";
     echo "<td>" . $row['Image'] . "</td>";
     echo "<td>" . $row['Votes'] . "</td>";
+    echo "<td><a class=\"btn btn-default\" href=\"?loc=engine/admin/deletepost&ispage=false&id=" . $row['ID'] . "\">Yes</a></td>" ;
     echo "</tr>";
     }
     echo "</table>";
